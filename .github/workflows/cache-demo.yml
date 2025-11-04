@@ -1,0 +1,22 @@
+name: Simple Cache Demo 
+
+on: [push]
+
+jobs:
+  cache-demo: 
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code 
+        actions: actions/checkout@v4
+
+      - name: Cache demo
+        uses: actions/cache@v4
+        with:
+          path: my-cache-folder
+          key: demo-cache
+
+      - name: Create a file 
+        run: |
+          mkdir -p my-cache-folder 
+          echo: "This will be cached inside the folder" > my-cache-folder/message.txt
