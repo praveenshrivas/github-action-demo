@@ -1,0 +1,15 @@
+name: Env Demo 
+
+on: [push] 
+
+jobs: 
+  demo: 
+    runs-on: ubuntu-latest
+    env: 
+      NAME: Praveen
+      CITY: Hyderabad
+    steps: 
+      - name: Print the Env variable. 
+        run: |
+          echo "Hello My name is $NAME"
+          echo "I live in $CITY"
