@@ -5,10 +5,9 @@ on: [push]
 jobs:
   cache-demo: 
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Code 
-        actions: actions/checkout@v4
+        uses: actions/checkout@v4
 
       - name: Cache demo
         uses: actions/cache@v4
