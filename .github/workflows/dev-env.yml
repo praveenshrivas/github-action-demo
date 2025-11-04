@@ -8,4 +8,4 @@ jobs:
     steps: 
       - name: Print the Env variable. 
         run: |
-          echo "Greeting from env setting ---> ${{ var.GREETING }}
+          echo "Greeting from env setting ---> ${{ vars.GREETING }}
