@@ -18,4 +18,7 @@ jobs:
       - name: Create a file 
         run: |
           mkdir -p my-cache-folder 
-          echo: "This will be cached inside the folder" > my-cache-folder/message.txt
+          echo "This will be cached inside the folder" > my-cache-folder/message.txt
+
+      - name: Display files 
+        run: cat my-cache-folder/message.txt
