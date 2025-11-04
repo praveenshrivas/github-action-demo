@@ -7,5 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: Print the Env variable. 
-        run: |
-          echo "Greeting from env setting ---> ${{ vars.GREETING }}
+        run: echo "Greeting from env setting ---> ${{ vars.GREETING }}"
