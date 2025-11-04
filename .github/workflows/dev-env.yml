@@ -1,0 +1,11 @@
+name: Env Demo 
+
+on: [push] 
+
+jobs: 
+  demo: 
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Print the Env variable. 
+        run: |
+          echo "Greeting from env setting ---> ${{ var.GREETING }}
